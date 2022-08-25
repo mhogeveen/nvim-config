@@ -36,3 +36,7 @@ map('n', '<space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 map('n', '<space>bd', ':BufferOrderByDirectory<CR>', opts)
 map('n', '<space>bl', ':BufferOrderByLanguage<CR>', opts)
 map('n', '<space>bw', ':BufferOrderByWindowNumber<CR>', opts)
+
+-- Hop
+map('n', '<space>h', ':HopWord<CR>', opts)
+map('n', '<space>H', ':HopLineStart<CR>', opts)

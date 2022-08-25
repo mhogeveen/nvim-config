@@ -52,4 +52,10 @@ packer.startup(function (use)
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter' }
+
+  -- Hop
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+  }
 end)
