@@ -58,4 +58,7 @@ packer.startup(function (use)
     'phaazon/hop.nvim',
     branch = 'v2',
   }
+
+  -- Wakatime
+  use { 'wakatime/vim-wakatime' }
 end)
