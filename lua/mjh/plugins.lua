@@ -35,7 +35,15 @@ packer.startup(function (use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
-    'jose-elias-alvarez/null-ls.nvim',
+    --'jose-elias-alvarez/null-ls.nvim',
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/vim-vsnip',
+    requires = { 'nvim-lua/plenary.nvim' }
   }
 
   -- Bufferline

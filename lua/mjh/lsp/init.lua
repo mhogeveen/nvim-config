@@ -6,6 +6,7 @@ require('mason-lspconfig').setup_handlers({
     require('lspconfig')[server_name].setup({
       on_attach = require('mjh.lsp.on_attach'),
       flags = { debounce_text_changes = 150 },
+      capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
     })
   end,
 
