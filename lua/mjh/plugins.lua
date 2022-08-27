@@ -7,7 +7,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function (use)
-	-- Packer itself
+	-- Packer
 	use { 'wbthomason/packer.nvim' }
 
 	-- Github colorscheme
@@ -67,4 +67,7 @@ packer.startup(function (use)
 
   -- Wakatime
   use { 'wakatime/vim-wakatime' }
+
+  -- Floaterm
+  use { 'voldikss/vim-floaterm' }
 end)
