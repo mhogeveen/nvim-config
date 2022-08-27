@@ -1,4 +1,4 @@
-require('github-theme').setup({
+github_theme.setup({
 	theme_style = "dark_default",
 	transparent = false,
 	function_style = "italic",

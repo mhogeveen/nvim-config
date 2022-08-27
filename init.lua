@@ -1,7 +1,7 @@
 require('mjh.options')
 require('mjh.keymaps')
 require('mjh.plugins')
-require('mjh.colors')
+require('mjh.colortheme')
 require('mjh.neotree')
 require('mjh.barbar')
 require('mjh.lualine')
