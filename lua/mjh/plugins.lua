@@ -1,3 +1,11 @@
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
+
 local status, packer = pcall(require, 'packer')
 if (not status) then
 	print('Packer is not installed')
