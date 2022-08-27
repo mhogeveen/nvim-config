@@ -2,7 +2,7 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 --Remap space as leader key
-map("", "<Space>", "<Nop>")
+map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -15,11 +15,11 @@ map('v', '<C-j>', ":m '>+1<CR>gv=gv", opts)
 map('v', '<C-k>', ":m '<-2<CR>gv", opts)
 
 -- Neotree
-map('n', '<leader>\'', ':Neotree action=focus toggle=true reveal=true<cr>')
+map('n', '<leader>\'', ':Neotree action=focus toggle=true reveal=true<cr>', opts)
 
 -- FZF
-map('n', '<leader>;', ':Files<CR>')
-map('n', '<leader>:', ':GFiles<CR>')
+map('n', '<leader>;', ':Files<CR>', opts)
+map('n', '<leader>:', ':GFiles<CR>', opts)
 
 -- LSPconfig
 map('n', '<space>e', vim.diagnostic.open_float, opts)
@@ -40,3 +40,6 @@ map('n', '<space>bw', ':BufferOrderByWindowNumber<CR>', opts)
 -- Hop
 map('n', '<space>h', ':HopWord<CR>', opts)
 map('n', '<space>H', ':HopLineStart<CR>', opts)
+
+-- Floaterm
+map('n', '<space>t', ':FloatermNew --height=0.8 --width=0.8<CR>', opts)
