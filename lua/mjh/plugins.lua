@@ -55,7 +55,7 @@ packer.startup(function (use)
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
-    'hrsh7th/vim-vsnip',
+    'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
     requires = { 'nvim-lua/plenary.nvim' }
   }
