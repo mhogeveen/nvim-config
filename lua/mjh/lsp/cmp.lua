@@ -2,31 +2,31 @@ local status_cmp, cmp = pcall(require, 'cmp')
 if (not status_cmp) then return end
 
 local kind_icons = {
-  Text = "",
-  Method = "",
+  Text = "",
+  Method = "m",
   Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "ﴯ",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "",
   Interface = "",
   Module = "",
-  Property = "ﰠ",
+  Property = "",
   Unit = "",
   Value = "",
   Enum = "",
   Keyword = "",
-  Snippet = "",
+  Snippet = "",
   Color = "",
   File = "",
   Reference = "",
   Folder = "",
   EnumMember = "",
-  Constant = "",
+  Constant = "",
   Struct = "",
   Event = "",
   Operator = "",
-  TypeParameter = ""
+  TypeParameter = "",
 }
 
 cmp.setup({
