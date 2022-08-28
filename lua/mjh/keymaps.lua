@@ -23,8 +23,8 @@ map('n', '<A-Right>', ':vertical resize +2<CR>', opts)
 map('n', '∆', ':m+<CR>==', opts)
 map('n', '˚', ':m-2<CR>==', opts)
 
--- Neotree
-map('n', '<leader>e', ':Neotree action=focus toggle=true reveal=true<cr>', opts)
+-- NvimTree
+map('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
 
 -- Telescope
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
