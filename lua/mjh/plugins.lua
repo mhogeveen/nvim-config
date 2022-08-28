@@ -86,4 +86,7 @@ packer.startup(function (use)
 
   -- Floaterm
   use { 'voldikss/vim-floaterm' }
+
+  -- Which key
+  use { 'folke/which-key.nvim' }
 end)
