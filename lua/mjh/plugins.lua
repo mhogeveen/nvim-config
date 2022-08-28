@@ -39,10 +39,10 @@ packer.startup(function (use)
     }
   }
 
-	-- FZF
-	use {
-    'junegunn/fzf',
-	  'junegunn/fzf.vim',
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.x',
+    requires = { 'nvim-lua/plenary.nvim' }
   }
 
   -- LSP's
