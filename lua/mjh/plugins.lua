@@ -28,15 +28,8 @@ packer.startup(function (use)
 	-- Github colorscheme
 	use { 'projekt0n/github-nvim-theme' }
 
-	-- Neotree
   use {
-    'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v2.x',
     requires = {
-      'nvim-lua/plenary.nvim',
-      'kyazdani42/nvim-web-devicons',
-      'muniftanjim/nui.nvim'
-    }
   }
 
   use {
