@@ -30,12 +30,6 @@ map('n', '<leader>e', ':Neotree action=focus toggle=true reveal=true<cr>', opts)
 map('n', '<leader>;', ':Files<CR>', opts)
 map('n', '<leader>:', ':GFiles<CR>', opts)
 
--- LSPconfig
-map('n', '<space>d', vim.diagnostic.open_float, opts)
-map('n', '[d', vim.diagnostic.goto_prev, opts)
-map('n', ']d', vim.diagnostic.goto_next, opts)
-map('n', '<space>q', vim.diagnostic.setloclist, opts)
-
 -- Barbar
 map('n', '<space>,', ':BufferPrevious<CR>', opts)
 map('n', '<space>.', ':BufferNext<CR>', opts)
