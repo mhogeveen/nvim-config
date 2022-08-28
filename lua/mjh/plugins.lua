@@ -6,11 +6,17 @@ vim.cmd [[
   augroup end
 ]]
 
-local status, packer = pcall(require, 'packer')
-if (not status) then
+local status_packer, packer = pcall(require, 'packer')
+if not status_packer then
 	print('Packer is not installed')
 	return
 end
+
+local status_impatient, impatient = pcall(require, 'impatient')
+if not status_impatient then return end
+
+-- Enable impatient profiling (only enable when wanting to view profiling info)
+--impatient.enable_profile()
 
 -- Have packer use a popup window
 packer.init({
@@ -24,6 +30,9 @@ packer.init({
 packer.startup(function (use)
 	-- Packer
 	use { 'wbthomason/packer.nvim' }
+
+  -- Impatient
+  use { 'lewis6991/impatient.nvim' }
 
 	-- Github colorscheme
 	use { 'projekt0n/github-nvim-theme' }
