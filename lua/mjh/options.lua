@@ -3,6 +3,7 @@ local options = {
 	cursorline = true,
 	signcolumn = 'yes',
 	ttimeoutlen = 10,
+  timeoutlen = 500,
 	numberwidth = 4,
 	mouse = 'a',
 	title = true,
