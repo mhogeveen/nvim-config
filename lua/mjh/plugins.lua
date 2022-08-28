@@ -97,4 +97,7 @@ packer.startup(function (use)
 
   -- Which key
   use { 'folke/which-key.nvim' }
+
+  -- Autopair
+  use { 'windwp/nvim-autopairs' }
 end)

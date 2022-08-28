@@ -7,4 +7,5 @@ treesitter.setup({
   incremental_selection = { enable = true },
   textobjects = { enable = true },
   indent = { enable = true },
+  autopairs = { enable = true },
 })
