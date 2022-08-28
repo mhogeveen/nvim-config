@@ -28,10 +28,16 @@ packer.startup(function (use)
 	-- Github colorscheme
 	use { 'projekt0n/github-nvim-theme' }
 
+  -- Nvim tree
   use {
+    'kyazdani42/nvim-tree.lua',
     requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.x',
