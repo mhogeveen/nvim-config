@@ -34,8 +34,13 @@ packer.startup(function (use)
   -- Impatient
   use { 'lewis6991/impatient.nvim' }
 
-	-- Github colorscheme
-	use { 'projekt0n/github-nvim-theme' }
+	-- Colorschemes
+	use {
+    'projekt0n/github-nvim-theme',
+    'sainnhe/sonokai',
+    'morhetz/gruvbox',
+    'rebelot/kanagawa.nvim',
+  }
 
   -- Nvim tree
   use {
