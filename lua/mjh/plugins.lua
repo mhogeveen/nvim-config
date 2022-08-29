@@ -105,4 +105,7 @@ packer.startup(function (use)
 
   -- Autopair
   use { 'windwp/nvim-autopairs' }
+
+  -- Startup
+  use { 'goolord/alpha-nvim' }
 end)
