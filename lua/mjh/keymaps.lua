@@ -47,7 +47,8 @@ map('n', '<space>h', ':HopWord<CR>', opts)
 map('n', '<space>H', ':HopLineStart<CR>', opts)
 
 -- Floaterm
-map('n', '<space>t', ':FloatermNew --height=0.8 --width=0.8<CR>', opts)
+map('n', '<space>te', ':FloatermNew --height=0.8 --width=0.8<CR>', opts)
+map('n', '<space>tl', ':FloatermNew --height=0.8 --width=0.8 lazygit<CR>', opts)
 
 -- Insert Mode --
 -- Move lines up and down
