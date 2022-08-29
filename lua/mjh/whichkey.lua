@@ -16,7 +16,11 @@ whichkey.register({
 
   -- Leader
   ['<leader>e'] = { 'Toggle tree explorer' },
-  ['<leader>t'] = { 'Toggle terminal' },
+  ['<leader>t'] = {
+    name = 'Terminal',
+    e = { 'Terminal - Empty' },
+    l = { 'Terminal - Lazygit' }
+  },
   ['<leader>f'] = {
     name = 'Telescope',
     f = { 'Find File' },
