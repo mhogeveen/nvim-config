@@ -13,6 +13,7 @@ whichkey.register({
   ['gr'] = { 'Show references' },
   ['gd'] = { 'Go to definition' },
   ['gD'] = { 'Go to declaration' },
+  ['gh'] = { 'Show hover panel' },
 
   -- Leader
   ['<leader>e'] = { 'Toggle tree explorer' },

@@ -20,8 +20,8 @@ map('n', '<A-Left>', ':vertical resize -2<CR>', opts)
 map('n', '<A-Right>', ':vertical resize +2<CR>', opts)
 
 -- Move lines up and down
-map('n', '∆', ':m+<CR>==', opts)
-map('n', '˚', ':m-2<CR>==', opts)
+map('n', 'K', ':m+<CR>==', opts)
+map('n', 'J', ':m-2<CR>==', opts)
 
 -- NvimTree
 map('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
