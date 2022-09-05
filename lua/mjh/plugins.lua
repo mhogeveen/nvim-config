@@ -70,6 +70,7 @@ packer.startup(function (use)
     'hrsh7th/nvim-cmp',
     'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
+    'jose-elias-alvarez/null-ls.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
   }
 
