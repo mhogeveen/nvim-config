@@ -20,8 +20,8 @@ map('n', '<A-Left>', ':vertical resize -2<CR>', opts)
 map('n', '<A-Right>', ':vertical resize +2<CR>', opts)
 
 -- Move lines up and down
-map('n', 'K', ':m+<CR>==', opts)
-map('n', 'J', ':m-2<CR>==', opts)
+map('n', 'J', ':m+<CR>==', opts)
+map('n', 'K', ':m-2<CR>==', opts)
 
 -- NvimTree
 map('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
@@ -52,13 +52,13 @@ map('n', '<space>tl', ':FloatermNew --height=0.8 --width=0.8 lazygit<CR>', opts)
 
 -- Insert Mode --
 -- Move lines up and down
-map('i', '∆', '<Esc>:m .+1<CR>==gi', opts)
-map('i', '˚', '<Esc>:m .-2<CR>==gi', opts)
+--map('i', '∆', '<Esc>:m .+1<CR>==gi', opts)
+--map('i', '˚', '<Esc>:m .-2<CR>==gi', opts)
 
 -- Visual Mode --
 -- Move lines up and down
-map('v', '∆', ":m '>+1<CR>gv=gv", opts)
-map('v', '˚', ":m '<-2<CR>gv", opts)
+map('v', 'J', ":m '>+1<CR>gv=gv", opts)
+map('v', 'K', ":m '<-2<CR>gv", opts)
 
 -- Stay in indent mode
 map('v', '<', '<gv', opts)
