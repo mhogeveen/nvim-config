@@ -41,6 +41,7 @@ packer.startup(function (use)
     'morhetz/gruvbox',
     'rebelot/kanagawa.nvim',
   }
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Nvim tree
   use {

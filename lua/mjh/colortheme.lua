@@ -1,17 +1,18 @@
---local theme_name = 'github_config'
-local theme_name = 'kanagawa'
+local theme_name = "kanagawa" -- catppuccin, github-theme, kanagawa
 
 local status, theme = pcall(require, theme_name)
 if not status then return end
 
-local github_config = {
-	theme_style = "dark_default",
-	transparent = false,
-	function_style = "italic",
-	variable_style = "italic",
+local configs = {}
+
+configs['github-theme'] = {
+  theme_style = "dark_default",
+  transparent = false,
+  function_style = "italic",
+  variable_style = "italic",
 }
 
-local kanagawa_config = {
+configs['kanagawa'] = {
   undercurl = true,                           -- enable undercurls
   commentStyle = { italic = true },
   functionStyle = { italic = true },
@@ -27,8 +28,35 @@ local kanagawa_config = {
   terminalColors = true,                      -- define vim.g.terminal_color_{0,17}
   colors = {},
   overrides = {},
-  theme = "default"                           -- 'default' or 'light' (experimental)
+  theme = "default",
 }
 
-theme.setup(kanagawa_config)
-vim.cmd("colorscheme kanagawa")
+configs['catppuccin'] = {
+  dim_inactive = {
+    enabled = true,
+    shade = "dark",
+    percentage = 0.15,
+  },
+  integrations = {
+    barbar = true,
+    cmp = true,
+    hop = true,
+    nvimtree = true,
+    treesitter = true,
+    telescope = true,
+    which_key = true,
+  }
+}
+
+-- Set Catppuccin flavour (can be set with the :Catppuccin <flavour> cmd on the fly)
+if theme_name == "catppuccin" then
+  vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+end
+
+-- Run theme setup function
+theme.setup(configs[theme_name])
+
+-- Set colorscheme with Vim cmd
+if theme_name ~= "github-theme" then
+  vim.cmd("colorscheme " .. theme_name)
+end
