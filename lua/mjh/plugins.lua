@@ -109,4 +109,7 @@ packer.startup(function (use)
 
   -- Startup
   use { 'goolord/alpha-nvim' }
+
+  -- Comment
+  use { 'numToStr/Comment.nvim' }
 end)
