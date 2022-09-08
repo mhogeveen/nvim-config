@@ -1,19 +1,21 @@
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
-]]
+]])
 
-local status_packer, packer = pcall(require, 'packer')
+local status_packer, packer = pcall(require, "packer")
 if not status_packer then
-	print('Packer is not installed')
-	return
+  print("Packer is not installed")
+  return
 end
 
-local status_impatient, impatient = pcall(require, 'impatient')
-if not status_impatient then return end
+local status_impatient, impatient = pcall(require, "impatient")
+if not status_impatient then
+  return
+end
 
 -- Enable impatient profiling (only enable when wanting to view profiling info)
 --impatient.enable_profile()
@@ -22,95 +24,97 @@ if not status_impatient then return end
 packer.init({
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require("packer.util").float({ border = "rounded" })
     end,
   },
 })
 
-packer.startup(function (use)
-	-- Packer
-	use { 'wbthomason/packer.nvim' }
+packer.startup(function(use)
+  -- Packer
+  use({ "wbthomason/packer.nvim" })
+
+  -- Often used requirements
+  use({
+    "kyazdani42/nvim-web-devicons",
+    "nvim-lua/plenary.nvim",
+  })
 
   -- Impatient
-  use { 'lewis6991/impatient.nvim' }
+  use({ "lewis6991/impatient.nvim" })
 
-	-- Colorschemes
-	use {
-    'projekt0n/github-nvim-theme',
-    'sainnhe/sonokai',
-    'morhetz/gruvbox',
-    'rebelot/kanagawa.nvim',
-  }
-  use { "catppuccin/nvim", as = "catppuccin" }
+  -- Colorschemes
+  use({
+    "projekt0n/github-nvim-theme",
+    "sainnhe/sonokai",
+    "morhetz/gruvbox",
+    "rebelot/kanagawa.nvim",
+  })
+  use({ "catppuccin/nvim", as = "catppuccin" })
 
   -- Nvim tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
+  use({
+    "kyazdani42/nvim-tree.lua",
+    tag = "nightly", -- optional, updated every week. (see issue #1193)
+  })
 
   -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.x',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
+  use({
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.x",
+  })
 
   -- LSP's
-  use {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/nvim-cmp',
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
-    'jose-elias-alvarez/null-ls.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
+  use({
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+    "hrsh7th/nvim-cmp",
+    "L3MON4D3/LuaSnip",
+    "rafamadriz/friendly-snippets",
+    "jose-elias-alvarez/null-ls.nvim",
+  })
 
   -- Bufferline
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
+  use({
+    "romgrk/barbar.nvim",
+  })
 
   -- Lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use({
+    "nvim-lualine/lualine.nvim",
+  })
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter' }
+  use({ "nvim-treesitter/nvim-treesitter" })
 
   -- Hop
-  use {
-    'phaazon/hop.nvim',
-    branch = 'v2',
-  }
+  use({
+    "phaazon/hop.nvim",
+    branch = "v2",
+  })
 
   -- Wakatime
-  use { 'wakatime/vim-wakatime' }
+  use({ "wakatime/vim-wakatime" })
 
   -- Floaterm
-  use { 'voldikss/vim-floaterm' }
+  use({ "voldikss/vim-floaterm" })
 
   -- Which key
-  use { 'folke/which-key.nvim' }
+  use({ "folke/which-key.nvim" })
 
   -- Autopair
-  use { 'windwp/nvim-autopairs' }
+  use({ "windwp/nvim-autopairs" })
 
   -- Startup
-  use { 'goolord/alpha-nvim' }
+  use({ "goolord/alpha-nvim" })
 
   -- Comment
-  use { 'numToStr/Comment.nvim' }
+  use({ "numToStr/Comment.nvim" })
+
+  -- Neogit
+  use({ "TimUntersberger/neogit" })
 end)
