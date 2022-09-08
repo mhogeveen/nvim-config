@@ -52,6 +52,7 @@ null_ls.setup({
     null_ls.builtins.formatting.stylelint,
     --null_ls.builtins.diagnostics.tsc,
     null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.rustfmt,
     null_ls.builtins.formatting.trim_newlines,
     null_ls.builtins.formatting.trim_whitespace,
   },
