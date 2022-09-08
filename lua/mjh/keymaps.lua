@@ -30,6 +30,9 @@ map("n", "<C-n>", ":m+<CR>==", opts)
 -- NvimTree
 map("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
+-- Neogit
+map("n", "<leader>t", ":Neogit<cr>", opts)
+
 -- Telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 map("n", "<leader>fg", ":Telescope git_files<CR>", opts)
@@ -45,19 +48,6 @@ map("n", "<space>bb", ":BufferOrderByBufferNumber<CR>", opts)
 map("n", "<space>bd", ":BufferOrderByDirectory<CR>", opts)
 map("n", "<space>bl", ":BufferOrderByLanguage<CR>", opts)
 map("n", "<space>bw", ":BufferOrderByWindowNumber<CR>", opts)
-
--- Hop
-map("n", "<space>h", ":HopWord<CR>", opts)
-map("n", "<space>H", ":HopLineStart<CR>", opts)
-
--- Floaterm
-map("n", "<space>te", ":FloatermNew --height=0.8 --width=0.8<CR>", opts)
-map("n", "<space>tl", ":FloatermNew --height=0.8 --width=0.8 lazygit<CR>", opts)
-
--- Insert Mode --
--- Move lines up and down
---map('i', '∆', '<Esc>:m .+1<CR>==gi', opts)
---map('i', '˚', '<Esc>:m .-2<CR>==gi', opts)
 
 -- Visual Mode --
 -- Move lines up and down

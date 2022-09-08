@@ -91,17 +91,8 @@ packer.startup(function(use)
   -- Treesitter
   use({ "nvim-treesitter/nvim-treesitter" })
 
-  -- Hop
-  use({
-    "phaazon/hop.nvim",
-    branch = "v2",
-  })
-
   -- Wakatime
   use({ "wakatime/vim-wakatime" })
-
-  -- Floaterm
-  use({ "voldikss/vim-floaterm" })
 
   -- Which key
   use({ "folke/which-key.nvim" })
