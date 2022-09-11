@@ -45,11 +45,17 @@ packer.startup(function(use)
   -- Colorschemes
   use({
     "projekt0n/github-nvim-theme",
-    "sainnhe/sonokai",
     "morhetz/gruvbox",
     "rebelot/kanagawa.nvim",
+    "wuelnerdotexe/vim-enfocado",
+    "sainnhe/everforest",
   })
   use({ "catppuccin/nvim", as = "catppuccin" })
+  use({
+    "rose-pine/neovim",
+    as = "rose-pine",
+    tag = "v1.*",
+  })
 
   -- Nvim tree
   use({
