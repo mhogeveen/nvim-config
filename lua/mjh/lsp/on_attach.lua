@@ -29,22 +29,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gf", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
 end
 
-local function lsp_formatting(client, bufnr)
-  local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-  if client.supports_method("textDocument/formatting") then
-    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = augroup,
-      buffer = bufnr,
-      callback = function()
-        client.request("textDocument/formatting", vim.lsp.util.make_formatting_params({}), nil, bufnr)
-      end,
-    })
-  end
-end
-
 return function(client, bufnr)
   lsp_highlight_document(client)
   lsp_keymaps(bufnr)
-  --lsp_formatting(client, bufnr)
 end
