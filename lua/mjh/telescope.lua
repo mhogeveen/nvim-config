@@ -1,15 +1,17 @@
-local status, telescope = pcall(require, 'telescope')
-if not status then return end
+local status, telescope = pcall(require, "telescope")
+if not status then
+  return
+end
 
 telescope.setup({
   pickers = {
     find_files = {
-      theme = 'dropdown',
+      theme = "dropdown",
       previewer = false,
     },
     buffers = {
-      theme = 'dropdown',
+      theme = "dropdown",
       previewer = false,
-    }
-  }
+    },
+  },
 })
