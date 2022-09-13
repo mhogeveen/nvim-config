@@ -27,6 +27,9 @@ map("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 map("n", "<C-p>", ":m-2<CR>==", opts)
 map("n", "<C-n>", ":m+<CR>==", opts)
 
+-- Delete without overwriting yank register
+map("n", "dd", '"_dd', opts)
+
 -- NvimTree
 map("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
